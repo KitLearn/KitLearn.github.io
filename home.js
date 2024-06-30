@@ -23,5 +23,5 @@ let background = setInterval(moveBackground, 50);
 
 function play() {
     let kitCode = document.getElementsByClassName("kit")[0].value;
-    window.open("/play?" + kitCode);
+    window.open("/game?" + kitCode);
 }
