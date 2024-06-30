@@ -1,0 +1,186 @@
+/* index.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/grass.png'); /* Grass background */
+    background-repeat: repeat;
+    background-size: auto 10%; /* Width is auto, height is 64px */
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-bottom-right-radius: 10px; /* Rounded corner */
+    z-index: 2; /* Make sure the header is above other content */
+}
+
+.song {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-top-right-radius: 10px; /* Rounded corner */
+    z-index: 21; /* Make sure the header is above other content */
+}
+
+.link {
+    z-index: 100;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.songName {
+    z-index: 100;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.image-container {
+    position: relative;
+}
+
+.circle {
+    width: 50vmin; /* 50% of the viewport minimum dimension */
+    height: 50vmin; /* 50% of the viewport minimum dimension */
+    border-radius: 50%;
+    transition: transform 0.5s ease; /* Smooth transition */
+    z-index: 1;
+    user-select: none; /* Prevent selection */
+    -webkit-user-select: none; /* Prevent selection on WebKit browsers */
+    -moz-user-select: none; /* Prevent selection on Mozilla browsers */
+    -ms-user-select: none; /* Prevent selection on Internet Explorer/Edge */
+}
+
+.invisible-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* Fully transparent */
+    z-index: 20;
+    user-select: none; /* Prevent selection */
+    -webkit-user-select: none; /* Prevent selection on WebKit browsers */
+    -moz-user-select: none; /* Prevent selection on Mozilla browsers */
+    -ms-user-select: none; /* Prevent selection on Internet Explorer/Edge */
+}
+
+.cone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vmin; /* Adjust cone width to match circle's size */
+    height: 50vmin; /* Adjust cone height to match circle's size */
+    transform: translate(-50%, -50%) rotate(0deg); /* Initial position and rotation */
+    pointer-events: none; /* Allow interactions to pass through */
+    z-index: 3; /* Above the circle */
+    user-select: none; /* Prevent selection */
+    -webkit-user-select: none; /* Prevent selection on WebKit browsers */
+    -moz-user-select: none; /* Prevent selection on Mozilla browsers */
+    -ms-user-select: none; /* Prevent selection on Internet Explorer/Edge */
+    transition: transform 0.05s ease, opacity 0.05s ease; /* Smooth transition for transform and opacity */
+    opacity: 0; /* 25% transparency */
+}
+
+.tempImage {
+    position: absolute;
+    width: 10%; /* Adjust cone width to match circle's size */
+    height: 10%; /* Adjust cone height to match circle's size */
+    user-select: none; /* Prevent selection */
+    -webkit-user-select: none; /* Prevent selection on WebKit browsers */
+    -moz-user-select: none; /* Prevent selection on Mozilla browsers */
+    -ms-user-select: none; /* Prevent selection on Internet Explorer/Edge */
+    z-index: 2.5; /* Above the circle */
+}
+
+.questionForKit {
+    position: absolute;
+    width: 10%; /* Adjust cone width to match circle's size */
+    height: 10%; /* Adjust cone height to match circle's size */
+    user-select: none; /* Prevent selection */
+    -webkit-user-select: none; /* Prevent selection on WebKit browsers */
+    -moz-user-select: none; /* Prevent selection on Mozilla browsers */
+    -ms-user-select: none; /* Prevent selection on Internet Explorer/Edge */
+    z-index: 2.7; /* Above the circle */
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+    width: 22%;
+    height: 22%;
+    border-radius: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundForKit {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corner */
+    z-index: 500; /* Make sure the header is above other content */
+}
+
+.Question {
+    position: absolute;
+    top: -1000%; /* 10% */
+    user-select: none; /* Prevent selection */
+    -webkit-user-select: none; /* Prevent selection on WebKit browsers */
+    -moz-user-select: none; /* Prevent selection on Mozilla browsers */
+    -ms-user-select: none; /* Prevent selection on Internet Explorer/Edge */
+    z-index: 2.6; /* Above the circle */
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+}
+
+@keyframes shrinkGrow {
+    0% {
+        transform: scale(0.75);
+    }
+    25% {
+        transform: scale(0.5); /* Shrinks to 50% of its size */
+    }
+    75% {
+        transform: scale(1.15); /* Grows slightly larger than original size */
+    }
+    100% {
+        transform: scale(1); /* Grows back to original size */
+    }
+}
+
+.circle.clicked {
+    animation: shrinkGrow 0.15s forwards; /* Apply the animation */
+}

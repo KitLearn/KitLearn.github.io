@@ -1,0 +1,97 @@
+/* index.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/grass.png'); /* Grass background */
+    background-repeat: repeat;
+    background-size: auto 10%; /* Width is auto, height is 64px */
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-bottom-right-radius: 10px; /* Rounded corner */
+    z-index: 2; /* Make sure the header is above other content */
+}
+
+.mainMenu {
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corner */
+    z-index: 2; /* Make sure the header is above other content */
+}
+
+.play {
+    position: absolute;
+    bottom: 5%;
+    left: 45%;
+    width: 10%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text horizontally */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corner */
+    z-index: 2; /* Make sure the header is above other content */
+    background-color: rebeccapurple;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+}
+
+.kit {
+    position: absolute;
+    bottom: 40%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center text horizontally */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
+    border-radius: 10px; /* Rounded corner */
+    z-index: 2; /* Make sure the header is above other content */
+    background-color: rebeccapurple;
+    border-color: rgba(0, 0, 0, 0);
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+    resize: none;
+}
+
+
+.link {
+    z-index: 100;
+}
+
+.logo {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
